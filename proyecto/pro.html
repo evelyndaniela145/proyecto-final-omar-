@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Audífonos para celular de distintas marcas en Pelus Case.">
+<meta name="theme-color" content="#171717">
+<title>Pelus Case | Audífonos para celular</title>
+<style>
+:root{--bg:#f5f3ef;--paper:#fffefa;--ink:#20201e;--muted:#77766f;--line:#e8e4dc;--accent:#ed6b3b;--accent-dark:#c94e26;--dark:#171717;--mint:#dcebe4;--radius:20px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button,a{touch-action:manipulation}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #1b75bb;outline-offset:3px}a{color:inherit;text-decoration:none}.container{width:min(1240px,calc(100% - clamp(24px,4vw,48px)));margin:auto}
+.promo{background:var(--dark);color:#f8eee8;text-align:center;padding:8px 12px;font-size:11px;letter-spacing:.13em;text-transform:uppercase}
+header{position:sticky;top:0;z-index:20;background:#fffefaed;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{min-height:74px;display:flex;align-items:center;gap:24px}.logo{display:flex;align-items:center;gap:10px;font-weight:950;letter-spacing:-.06em;font-size:21px;flex-shrink:0}.logo-mark{width:39px;height:39px;border-radius:13px;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:18px}.logo small{display:block;color:var(--muted);font-size:9px;letter-spacing:.18em;margin-top:-4px}.navlinks{display:flex;gap:24px;margin-left:auto;color:#5f5d57;font-size:13px;font-weight:700}.navlinks a:hover{color:var(--accent-dark)}.navactions{display:flex;gap:9px;flex-shrink:0}.btn{border:0;border-radius:12px;padding:11px 16px;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px}.btn-main{background:var(--accent);color:white}.btn-main:hover{background:var(--accent-dark)}.btn-soft{background:#f8e9e1;color:#a64425}.btn-outline{background:transparent;border:1px solid var(--line);color:var(--ink)}.count{background:white;color:var(--accent-dark);border-radius:20px;padding:0 7px}
+.hero{padding:32px 0 14px}.hero-box{background:#20201e;border-radius:27px;min-height:375px;color:white;display:grid;grid-template-columns:1.05fr .95fr;overflow:hidden;position:relative}.hero-copy{padding:48px 52px;align-self:center;z-index:2}.eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#ffad8c;font-weight:900}.hero h1{font-size:clamp(36px,4.8vw,64px);line-height:.99;letter-spacing:-.06em;margin:16px 0}.hero p{color:#d4d0c9;max-width:460px;font-size:clamp(14px,1.2vw,16px)}.hero .btn{margin-top:15px}.hero-art{position:relative;display:grid;place-items:center;min-height:240px;background:radial-gradient(circle at 55% 50%,#f18a5b 0,#b64f30 24%,#572d24 52%,#20201e 74%)}.headphone-shape{width:220px;height:220px;border:22px solid #f5d8c7;border-bottom-color:transparent;border-radius:48% 48% 35% 35%;position:relative;transform:rotate(0deg);filter:drop-shadow(0 20px 22px #0008)}.headphone-shape:before,.headphone-shape:after{content:"";position:absolute;bottom:-5px;width:55px;height:90px;background:linear-gradient(135deg,#fff4e9,#c6a18e);border:7px solid #f5d8c7;border-radius:22px}.headphone-shape:before{left:-34px}.headphone-shape:after{right:-34px}.float-tag{position:absolute;background:#fffefa;color:var(--ink);border-radius:13px;padding:10px 14px;font-size:11px;font-weight:900;box-shadow:0 12px 30px #0003}.float-tag.a{top:38px;right:10%}.float-tag.b{bottom:38px;left:8%}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin:44px 0 18px}.section-head h2{margin:0;font-size:clamp(24px,2.8vw,34px);letter-spacing:-.045em}.section-head p{margin:5px 0 0;color:var(--muted)}.section-kicker{font-size:10px;text-transform:uppercase;letter-spacing:.16em;color:var(--accent-dark);font-weight:900}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 16px}.search{flex:1;min-width:200px;border:1px solid var(--line);background:var(--paper);padding:13px 15px;border-radius:12px}.sort{border:1px solid var(--line);background:var(--paper);padding:12px 14px;border-radius:12px;color:var(--ink)}.brands{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}.brand-chip{border:1px solid var(--line);background:var(--paper);color:#68665f;border-radius:30px;padding:8px 15px;font-size:12px;font-weight:800;cursor:pointer}.brand-chip.active,.brand-chip:hover{background:var(--dark);color:white;border-color:var(--dark)}
+
+.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 15px 34px #30251a12}
+.product-photo{aspect-ratio:1 / 1;width:100%;background:#f6f4ef;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:14px;cursor:pointer}
+.product-photo img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:10px;display:block}
+.product-photo .emoji{font-size:clamp(54px,5vw,76px);line-height:1}
+.brand-label{position:absolute;top:12px;left:12px;background:#fffefaeb;padding:5px 10px;border-radius:30px;font-size:10px;letter-spacing:.08em;font-weight:950;text-transform:uppercase;z-index:2}
+.status-badge{position:absolute;bottom:10px;right:10px;background:#fff0eb;color:#a64425;padding:4px 9px;border-radius:20px;font-size:10px;font-weight:850;z-index:2}
+.card-body{padding:15px;display:flex;flex-direction:column;flex:1}
+.type{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-dark);font-weight:900}
+.card-title-btn{background:none;border:0;padding:0;text-align:left;cursor:pointer;color:inherit;margin:5px 0}
+.card-title-btn:hover h3{color:var(--accent-dark)}
+.card h3{font-size:15px;margin:0;line-height:1.3}
+.desc{font-size:12px;color:var(--muted);margin:6px 0 13px;min-height:36px}
+.card-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto}
+.price{font-size:19px;font-weight:950;letter-spacing:-.04em}
+.card-actions{display:flex;align-items:center;gap:6px}
+.zoom-btn{border:1px solid var(--line);height:39px;padding:0 10px;border-radius:12px;background:#faf8f4;color:var(--ink);font-size:11px;font-weight:800;cursor:pointer}
+.zoom-btn:hover{border-color:var(--dark);background:#f0ede6}
+.add{border:0;width:39px;height:39px;border-radius:12px;background:var(--dark);color:white;font-size:22px;cursor:pointer}.add:hover{background:var(--accent)}.add:disabled{background:#c7c3ba;cursor:not-allowed}.empty{grid-column:1/-1;text-align:center;background:var(--paper);border:1px dashed #d4cec3;padding:42px;border-radius:17px;color:var(--muted)}
+
+.perks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:55px 0}.perk{background:var(--paper);border:1px solid var(--line);border-radius:17px;padding:20px;display:flex;gap:12px;align-items:center}.perk-icon{font-size:25px}.perk b{display:block;font-size:13px}.perk small{color:var(--muted);font-size:11px}
+footer{background:var(--dark);color:white;padding:35px 0;margin-top:60px}.footer-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}.footer-row p{color:#bdb9b1;margin:5px 0;font-size:12px}.footer-meta{text-align:right;display:grid;gap:6px}.footer-admin-link{background:none;border:0;padding:0;color:#7e7b74;font-size:11px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;justify-self:end}.footer-admin-link:hover{color:#bdb9b1}
+
+.overlay{display:none;position:fixed;inset:0;background:#151515b5;z-index:40;align-items:center;justify-content:center;padding:15px}.overlay.open{display:flex}
+.modal{width:min(610px,100%);max-height:92vh;overflow:auto;background:var(--paper);border-radius:20px;padding:23px;box-shadow:0 25px 80px #0005}
+.modal.large{width:min(980px,100%)}
+.modal.detail-modal{width:min(820px,100%)}
+.detail-grid{display:grid;grid-template-columns:minmax(240px,1fr) 1.05fr;gap:22px;align-items:center}
+.detail-stage{aspect-ratio:1 / 1;width:100%;background:#f6f4ef;border:1px solid var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center;padding:22px;overflow:hidden}
+.detail-stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:12px;display:block}
+.detail-stage .emoji{font-size:clamp(84px,11vw,124px);line-height:1}
+.detail-info h2{margin:6px 0 8px;font-size:clamp(22px,2.5vw,30px);letter-spacing:-.04em;line-height:1.15}
+.detail-price{font-size:26px;font-weight:950;letter-spacing:-.04em;margin:12px 0 18px}
+
+.modal-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}.modal-head h2{font-size:22px;letter-spacing:-.04em;margin:0}.close{border:0;width:38px;height:38px;border-radius:11px;background:#efede8;font-size:22px;cursor:pointer;flex-shrink:0}.cart-line{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.cart-line small{display:block;color:var(--muted)}.qty{display:flex;align-items:center;gap:8px}.qty button{border:1px solid var(--line);background:white;border-radius:8px;width:30px;height:30px;cursor:pointer}.total{display:flex;justify-content:space-between;font-size:19px;font-weight:950;padding:17px 0}.field{display:grid;gap:6px;margin:11px 0}.field label{font-size:12px;font-weight:850}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px;background:#fffefa}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.check-row{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:750;margin:8px 0}.check-row input{width:auto}.hint{font-size:11px;color:var(--muted)}.err-msg{color:#b34326;font-size:12px;font-weight:750;min-height:18px}.admin-note{background:#f9eee7;color:#844126;border-radius:11px;padding:12px;font-size:12px;margin-bottom:15px}.admin-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:18px}.admin-panel{border:1px solid var(--line);border-radius:14px;padding:15px}.admin-panel h3{font-size:14px;margin:0 0 12px}.admin-list{display:grid;gap:12px;max-height:540px;overflow:auto}.brand-group{border:1px solid var(--line);border-radius:12px;padding:10px;background:#fcfbf8}.brand-group-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px}.brand-group-title{font-size:12px;font-weight:900}.brand-slot-count{font-size:11px;font-weight:800;padding:2px 8px;border-radius:20px;background:#e8f5ee;color:#1f6e43}.brand-slot-count.full{background:#fff0eb;color:#a64425}.brand-slot-list{display:grid;gap:6px}.admin-product{display:grid;grid-template-columns:42px 1fr auto;gap:8px;align-items:center;padding:7px 8px;border:1px solid var(--line);border-radius:10px;background:var(--paper)}.admin-product.paused{opacity:.7;background:#faf8f4}.empty-slot{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:7px 10px;border:1px dashed #d6d0c4;border-radius:10px;font-size:11px;color:var(--muted)}.slot-add-btn{border:0;border-radius:8px;padding:5px 9px;background:#f8e9e1;color:#a64425;font-size:11px;font-weight:800;cursor:pointer}.slot-add-btn:hover{background:var(--accent);color:#fff}.thumb{width:42px;height:42px;border-radius:8px;background:#f6f4ef;display:flex;align-items:center;justify-content:center;overflow:hidden;font-size:20px;padding:3px}.thumb img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}.admin-product strong{display:block;font-size:11px}.admin-product small{font-size:10px;color:var(--muted)}.admin-product button{border:0;border-radius:8px;padding:6px 8px;cursor:pointer;font-size:12px}.quick-cam{background:#e8f5ee;color:#1f6e43}.edit{background:#edf1f7}.delete{background:#fff0eb;color:#b34326}
+
+.dropzone{border:2px dashed #cfc9be;border-radius:12px;padding:14px;text-align:center;cursor:pointer;background:#faf8f4;transition:all .15s;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:118px}
+.dropzone:hover,.dropzone.dragover{border-color:var(--accent);background:#fdf3ee}
+.dropzone input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.preview-box img{width:96px;height:96px;object-fit:contain;background:#f6f4ef;border-radius:12px;border:1px solid var(--line);display:block;padding:4px}
+.remove-img{position:relative;z-index:2;background:#fff0eb;color:#b34326;border:1px solid #f5cdc1;border-radius:8px;padding:4px 10px;font-size:11px;font-weight:700;cursor:pointer}
+.remove-img:hover{background:#ffe1d6}
+
+/* Laptops y tablets horizontales */
+@media(max-width:1100px){
+  .products{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .hero-copy{padding:40px}
+}
+
+/* Tablets verticales y pantallas medianas */
+@media(max-width:820px){
+  .hero-box{grid-template-columns:1fr}
+  .hero-copy{padding:36px 28px 12px}
+  .hero-art{min-height:220px}
+  .admin-grid,.detail-grid{grid-template-columns:1fr}
+  .perks{grid-template-columns:1fr}
+}
+
+/* Celulares */
+@media(max-width:640px){
+  .nav{padding:10px 0;gap:10px;flex-wrap:wrap}
+  .navlinks{order:3;width:100%;justify-content:space-between;gap:10px;font-size:12px}
+  .navactions{margin-left:auto}
+  .hero{padding-top:18px}
+  .headphone-shape{width:146px;height:146px;border-width:16px}
+  .headphone-shape:before,.headphone-shape:after{width:40px;height:66px;border-width:5px}
+  .headphone-shape:before{left:-26px}
+  .headphone-shape:after{right:-26px}
+  .float-tag.a{top:18px;right:6%}
+  .float-tag.b{bottom:18px;left:6%}
+  .section-head{align-items:start;flex-direction:column;margin-top:34px}
+  .filters{flex-direction:column}
+  .products{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+  .product-photo{padding:10px}
+  .card-body{padding:12px}
+  .card h3{font-size:13px}
+  .desc{font-size:11px;min-height:32px}
+  .price{font-size:16px}
+  .zoom-btn{padding:0 8px;height:36px;font-size:10px}
+  .add{width:36px;height:36px;font-size:20px}
+  .field-row{grid-template-columns:1fr}
+  .modal{padding:17px}
+  .footer-row{align-items:flex-start}
+  .footer-meta{text-align:left}
+  .footer-admin-link{justify-self:start}
+}
+
+/* Celulares muy angostos */
+@media(max-width:380px){
+  .products{grid-template-columns:1fr}
+  .logo{font-size:18px}
+}
+
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="promo">PELUS CASE · ESPECIALISTAS EN AUDÍFONOS PARA CELULAR</div>
+<header><div class="container nav">
+  <a href="#" class="logo"><span class="logo-mark">P</span><span>PELUS CASE<small>AUDIO & ACCESSORIES</small></span></a>
+  <nav class="navlinks" aria-label="Navegación principal"><a href="#catalogo">Catálogo</a><a href="#marcas">Marcas</a><a href="#contacto">Contacto</a></nav>
+  <div class="navactions"><button class="btn btn-main" id="cartBtn">🛒 <span class="count" id="cartCount">0</span></button></div>
+</div></header>
+<main class="container">
+<section class="hero"><div class="hero-box">
+  <div class="hero-copy"><div class="eyebrow">Encuentra tu sonido</div><h1>El sonido que<br>va contigo.</h1><p>Audífonos para cada estilo, momento y presupuesto. Explora 4 modelos de cada marca y encuentra tus favoritos en Pelus Case.</p><a class="btn btn-main" href="#catalogo">Ver audífonos&nbsp; ↗</a></div>
+  <div class="hero-art" role="img" aria-label="Ilustración decorativa de audífonos"><div class="headphone-shape"></div><span class="float-tag a">TU MÚSICA. TU ESTILO.</span><span class="float-tag b">5 MARCAS · 4 MODELOS C/U</span></div>
+</div></section>
+<section id="catalogo">
+  <div class="section-head"><div><div class="section-kicker">Catálogo Pelus Case</div><h2>Encuentra tus próximos audífonos</h2><p>Toca cualquier modelo para verlo en grande. 4 modelos por marca.</p></div><span class="hint" id="resultCount"></span></div>
+  <div class="filters"><input class="search" id="search" type="search" placeholder="¿Qué audífonos buscas?" aria-label="Buscar audífonos"><select class="sort" id="sort" aria-label="Ordenar catálogo"><option value="featured">Orden recomendado</option><option value="low">Precio: menor a mayor</option><option value="high">Precio: mayor a menor</option><option value="az">Nombre: A-Z</option></select></div>
+  <div class="brands" id="brands"><button class="brand-chip active" data-brand="Todas">Todas las marcas</button></div>
+  <div class="products" id="products" aria-live="polite"></div>
+</section>
+<section class="perks" id="marcas">
+  <article class="perk"><span class="perk-icon">🎧</span><div><b>4 modelos por marca</b><small>JBL, Sony, Xiaomi, Motorola y Samsung.</small></div></article>
+  <article class="perk"><span class="perk-icon">💬</span><div><b>Pedidos por WhatsApp</b><small>Envía tu selección directamente.</small></div></article>
+  <article class="perk"><span class="perk-icon">💛</span><div><b>Atención personal</b><small>Te ayudamos a elegir tus audífonos.</small></div></article>
+</section>
+</main>
+<footer id="contacto"><div class="container footer-row">
+  <div><strong>PELUS CASE</strong><p>Audífonos para celular de distintas marcas.</p></div>
+  <div><strong>¿Tienes dudas?</strong><p>Arma tu pedido y contáctanos por WhatsApp.</p></div>
+  <div class="footer-meta">
+    <p>© <span id="year"></span> Pelus Case</p>
+    <button type="button" class="footer-admin-link" id="adminBtn">Administrar</button>
+  </div>
+</div></footer>
+
+<!-- Modal Vista Ampliada del Producto -->
+<div class="overlay" id="detailModal" role="dialog" aria-modal="true" aria-labelledby="detailTitle"><div class="modal detail-modal">
+  <div class="modal-head">
+    <span class="type" id="detailBrand">MARCA</span>
+    <button class="close" data-close="detailModal" aria-label="Cerrar">×</button>
+  </div>
+  <div class="detail-grid">
+    <div class="detail-stage" id="detailStage"></div>
+    <div class="detail-info">
+      <span class="type" id="detailCategory">Audífonos para celular</span>
+      <h2 id="detailTitle">Modelo</h2>
+      <p class="desc" id="detailDesc" style="min-height:auto;font-size:14px;margin:10px 0"></p>
+      <div id="detailStatus"></div>
+      <div class="detail-price" id="detailPrice">$0.00</div>
+      <button class="btn btn-main" id="detailAddBtn" style="width:100%">Agregar al carrito</button>
+    </div>
+  </div>
+</div></div>
+
+<div class="overlay" id="cartModal" role="dialog" aria-modal="true" aria-labelledby="cartTitle"><div class="modal">
+  <div class="modal-head"><h2 id="cartTitle">Tu carrito</h2><button class="close" data-close="cartModal" aria-label="Cerrar">×</button></div>
+  <div id="cartItems"></div><div class="total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+  <div class="field"><label for="customer">Nombre del cliente</label><input id="customer" placeholder="Escribe tu nombre"></div>
+  <button class="btn btn-main" id="sendWhatsApp" style="width:100%">Enviar pedido por WhatsApp ↗</button>
+  <p class="hint">Se abrirá WhatsApp con el resumen. Revisa el mensaje y presiona enviar.</p>
+</div></div>
+
+<div class="overlay" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle"><div class="modal">
+  <div class="modal-head"><h2 id="loginTitle">Acceso administrador</h2><button class="close" data-close="loginModal" aria-label="Cerrar">×</button></div>
+  <p class="hint" style="margin-top:0">Solo el administrador de Pelus Case puede agregar, editar o eliminar productos. Los clientes solo pueden consultar y comprar.</p>
+  <form id="loginForm">
+    <div class="field"><label for="adminPassInput">Clave de administrador</label><input id="adminPassInput" type="password" required autocomplete="current-password" placeholder="Ingresa la clave"></div>
+    <div class="err-msg" id="loginError"></div>
+    <button class="btn btn-main" type="submit" style="width:100%">Entrar al panel</button>
+  </form>
+</div></div>
+
+<div class="overlay" id="adminModal" role="dialog" aria-modal="true" aria-labelledby="adminTitle"><div class="modal large">
+  <div class="modal-head">
+    <div><h2 id="adminTitle">Panel de administrador</h2><span class="hint">Cada marca admite hasta 4 productos. Las fotos se ajustan automáticamente al espacio del producto.</span></div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button class="btn btn-outline" type="button" id="logoutBtn" style="padding:8px 12px;font-size:12px">Cerrar sesión</button>
+      <button class="close" data-close="adminModal" aria-label="Cerrar">×</button>
+    </div>
+  </div>
+  <div class="admin-note">Límite por categoría de marca: máximo <b>4 productos por marca</b>. Si una marca está en 4/4, elimina o edita uno para liberar espacio.</div>
+  <div class="admin-grid">
+    <section class="admin-panel"><h3 id="formTitle">＋ Agregar audífonos</h3>
+      <form id="productForm">
+        <input type="hidden" id="productId">
+        <div class="field"><label for="productName">Nombre o modelo *</label><input id="productName" required maxlength="80" placeholder="Ej. Tune 510BT"></div>
+        <div class="field-row">
+          <div class="field"><label for="brandSelect">Marca (máx. 4) *</label><select id="brandSelect"></select></div>
+          <div class="field"><label for="productPrice">Precio (MXN) *</label><input id="productPrice" type="number" min="0.01" step="0.01" required placeholder="599"></div>
+        </div>
+        <div class="hint" id="brandQuotaHint" style="margin-top:-4px;margin-bottom:8px"></div>
+        <div class="field-row">
+          <div class="field"><label for="productCategory">Tipo / Etiqueta</label><input id="productCategory" maxlength="40" placeholder="Audífonos para celular"></div>
+          <div class="field"><label for="productEmoji">Ícono si no hay foto</label><input id="productEmoji" maxlength="6" placeholder="🎧"></div>
+        </div>
+        <div class="field"><label for="productDesc">Descripción completa</label><textarea id="productDesc" rows="2" maxlength="180" placeholder="Bluetooth, inalámbricos, color, compatibilidad..."></textarea></div>
+        <label class="check-row"><input type="checkbox" id="productAvailable" checked><span>Disponible para compra de clientes</span></label>
+
+        <div class="field">
+          <label for="productImage">Fotografía del producto (cualquier tamaño)</label>
+          <div class="dropzone" id="dropZone">
+            <input id="productImage" type="file" accept="image/*">
+            <div id="dropPlaceholder">
+              <div style="font-size:24px">📷</div>
+              <strong style="font-size:12px">Haz clic, arrastra una foto o pega (Ctrl+V)</strong>
+              <div class="hint">Se adapta sola al espacio del producto</div>
+            </div>
+            <div class="preview-box" id="previewBox" style="display:none">
+              <img id="imagePreview" src="" alt="Vista previa">
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;min-height:24px">
+            <span class="hint" id="imageStatus"></span>
+            <button type="button" class="remove-img" id="removeImgBtn" style="display:none">Quitar foto</button>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-main" type="submit" id="saveBtn">Guardar producto</button><button class="btn btn-outline" type="button" id="clearBtn">Limpiar</button></div>
+      </form>
+    </section>
+    <section class="admin-panel">
+      <h3>Productos por marca (4 por marca) <span class="hint" style="font-weight:400">(📷 foto · ✎ editar · × borrar)</span></h3>
+      <input type="file" id="quickImageInput" accept="image/*" style="display:none">
+      <div class="admin-list" id="adminList"></div>
+    </section>
+  </div>
+</div></div>
+
+<script>
+/* Reemplaza el número por tu WhatsApp: código de país + número, sin + ni espacios. */
+const WHATSAPP_NUMBER="5560323217";
+/* Cambia esta clave por la contraseña secreta del administrador */
+const ADMIN_PASSCODE="pelus2026";
+const MAX_PER_BRAND=4;
+const STORAGE="pelus_headphones_products_v4", CART_STORAGE="pelus_headphones_cart_v1", AUTH_KEY="pelus_admin_auth_v1";
+const brands=["JBL","Sony","Xiaomi","Motorola","Samsung"];
+const starter=[
+  // JBL (4 modelos)
+  {id:101,name:"Tune 510BT",brand:"JBL",category:"Audífonos para celular",price:599,description:"Inalámbricos de diadema con sonido JBL Pure Bass y hasta 40 h de batería.",emoji:"🎧",available:true},
+  {id:102,name:"Wave Buds",brand:"JBL",category:"Audífonos para celular",price:499,description:"True wireless compactos con ajuste ergonómico y resistencia al agua.",emoji:"🎵",available:true},
+  {id:103,name:"Tune Buds",brand:"JBL",category:"Audífonos para celular",price:749,description:"Cancelación activa de ruido y estuche de carga rápida.",emoji:"🎧",available:true},
+  {id:104,name:"Wave Beam",brand:"JBL",category:"Audífonos para celular",price:549,description:"Diseño tipo bastón con llamadas claras y modo ambiental.",emoji:"🎶",available:true},
+
+  // Sony (4 modelos)
+  {id:201,name:"WH-CH520",brand:"Sony",category:"Audífonos para celular",price:899,description:"Inalámbricos de diadema ultraligeros con sonido personalizable.",emoji:"🎧",available:true},
+  {id:202,name:"WI-C100",brand:"Sony",category:"Audífonos para celular",price:549,description:"Banda de cuello inalámbrica con gran autonomía diaria.",emoji:"🎶",available:true},
+  {id:203,name:"WF-C500",brand:"Sony",category:"Audífonos para celular",price:999,description:"Compactos Bluetooth con certificación IPX4 y sonido DSEE.",emoji:"🎵",available:true},
+  {id:204,name:"WF-C700N",brand:"Sony",category:"Audífonos para celular",price:1499,description:"Cancelación de ruido y diseño pequeño para uso prolongado.",emoji:"🎧",available:true},
+
+  // Xiaomi (4 modelos)
+  {id:301,name:"Redmi Buds 6 Play",brand:"Xiaomi",category:"Audífonos para celular",price:299,description:"Inalámbricos compactos con carga rápida y diseño ligero.",emoji:"🎧",available:true},
+  {id:302,name:"Redmi Buds 6 Active",brand:"Xiaomi",category:"Audífonos para celular",price:399,description:"Bluetooth para uso diario con reducción de ruido en llamadas.",emoji:"🎵",available:true},
+  {id:303,name:"Redmi Buds 6 Lite",brand:"Xiaomi",category:"Audífonos para celular",price:449,description:"Driver de 12.4 mm y cancelación de ruido para llamadas.",emoji:"🎶",available:true},
+  {id:304,name:"Redmi Buds 5",brand:"Xiaomi",category:"Audífonos para celular",price:699,description:"Cancelación activa de ruido y conexión estable para celular.",emoji:"🎧",available:true},
+
+  // Motorola (4 modelos)
+  {id:401,name:"Moto Buds 085",brand:"Motorola",category:"Audífonos para celular",price:349,description:"Inalámbricos Bluetooth con emparejamiento rápido y estuche portátil.",emoji:"🎧",available:true},
+  {id:402,name:"Moto Buds",brand:"Motorola",category:"Audífonos para celular",price:699,description:"True wireless con cancelación activa de ruido y sonido dinámico.",emoji:"🎶",available:true},
+  {id:403,name:"Moto Buds+",brand:"Motorola",category:"Audífonos para celular",price:1199,description:"Sonido afinado con Hi-Res Audio y modo transparencia.",emoji:"🎧",available:true},
+  {id:404,name:"Moto XT220",brand:"Motorola",category:"Audífonos para celular",price:529,description:"Diadema Bluetooth plegable ideal para viajes y estudio.",emoji:"🎵",available:true},
+
+  // Samsung (4 modelos)
+  {id:501,name:"Galaxy Buds FE",brand:"Samsung",category:"Audífonos para celular",price:999,description:"Ajuste seguro con aletas, cancelación activa y ecosistema Galaxy.",emoji:"🎧",available:true},
+  {id:502,name:"Galaxy Buds Core",brand:"Samsung",category:"Audífonos para celular",price:799,description:"Bluetooth compactos con audio nítido y uso cómodo diario.",emoji:"🎵",available:true},
+  {id:503,name:"Galaxy Buds2",brand:"Samsung",category:"Audífonos para celular",price:1199,description:"Diseño ligero con sonido balanceado y llamadas claras.",emoji:"🎶",available:true},
+  {id:504,name:"Galaxy Buds3",brand:"Samsung",category:"Audífonos para celular",price:1999,description:"Nuevo diseño ergonómico con audio adaptativo y Galaxy AI.",emoji:"🎧",available:true}
+];
+
+function normalizeInitialProducts(rawList){
+  const source = Array.isArray(rawList) ? rawList : starter;
+  const counts = Object.fromEntries(brands.map(b => [b, 0]));
+  const result = [];
+  for (const p of source) {
+    if (!brands.includes(p.brand)) continue;
+    if (counts[p.brand] >= MAX_PER_BRAND) continue;
+    counts[p.brand]++;
+    result.push({
+      ...p,
+      available: p.available !== false,
+      category: p.category || "Audífonos para celular",
+      emoji: p.emoji || "🎧"
+    });
+  }
+  return result;
+}
+
+let products = normalizeInitialProducts(JSON.parse(localStorage.getItem(STORAGE) || "null"));
+let cart = JSON.parse(localStorage.getItem(CART_STORAGE) || "[]");
+let activeBrand = "Todas", currentImage = null, quickTargetId = null;
+
+const $=id=>document.getElementById(id);
+const money=n=>new Intl.NumberFormat("es-MX",{style:"currency",currency:"MXN"}).format(n);
+const isAdmin=()=>sessionStorage.getItem(AUTH_KEY)==="1";
+const brandCount=b=>products.filter(p=>p.brand===b).length;
+
+const save=()=>{
+  try {
+    localStorage.setItem(STORAGE,JSON.stringify(products));
+    localStorage.setItem(CART_STORAGE,JSON.stringify(cart));
+  } catch (e) {
+    alert("La memoria del navegador está llena. Elimina algunos productos antiguos para liberar espacio.");
+  }
+};
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+function open(id){$(id).classList.add("open")}
+function close(id){$(id).classList.remove("open")}
+
+function openProductDetail(id){
+  const p = products.find(x => x.id === id);
+  if(!p) return;
+  $("detailBrand").textContent = p.brand;
+  $("detailCategory").textContent = p.category || "Audífonos para celular";
+  $("detailTitle").textContent = p.name;
+  $("detailDesc").textContent = p.description || "Consulta disponibilidad.";
+  $("detailPrice").textContent = money(p.price);
+  $("detailStage").innerHTML = p.image
+    ? `<img src="${p.image}" alt="${esc(p.name)}">`
+    : `<span class="emoji" aria-hidden="true">${esc(p.emoji || "🎧")}</span>`;
+
+  if(p.available === false){
+    $("detailStatus").innerHTML = `<span class="status-badge" style="position:static;display:inline-block">Agotado</span>`;
+    $("detailAddBtn").disabled = true;
+    $("detailAddBtn").textContent = "Producto agotado";
+    $("detailAddBtn").onclick = null;
+  } else {
+    $("detailStatus").innerHTML = `<span style="font-size:12px;font-weight:800;color:#1f6e43">Disponible</span>`;
+    $("detailAddBtn").disabled = false;
+    $("detailAddBtn").textContent = "Agregar al carrito";
+    $("detailAddBtn").onclick = () => {
+      addCart(p.id);
+      close("detailModal");
+    };
+  }
+  open("detailModal");
+}
+
+function updateBrandQuotaHint(){
+  const selected = $("brandSelect").value;
+  if(!selected) return;
+  const used = brandCount(selected);
+  const editingId = Number($("productId").value || 0);
+  const editingSameBrand = editingId && products.some(p => p.id === editingId && p.brand === selected);
+  const remaining = MAX_PER_BRAND - used + (editingSameBrand ? 1 : 0);
+  $("brandQuotaHint").textContent = remaining > 0
+    ? `${selected}: ${used}/${MAX_PER_BRAND} productos registrados (${remaining} espacio${remaining === 1 ? "" : "s"} disponible${remaining === 1 ? "" : "s"}).`
+    : `${selected}: ${used}/${MAX_PER_BRAND} productos registrados (límite alcanzado para esta marca).`;
+}
+
+function openAdminPanel(){
+  if(isAdmin()){
+    initBrandControls();
+    renderAdmin();
+    open("adminModal");
+  }else{
+    $("adminPassInput").value="";
+    $("loginError").textContent="";
+    open("loginModal");
+    $("adminPassInput").focus();
+  }
+}
+
+$("adminBtn").onclick=openAdminPanel;
+
+$("loginForm").onsubmit=e=>{
+  e.preventDefault();
+  if($("adminPassInput").value===ADMIN_PASSCODE){
+    sessionStorage.setItem(AUTH_KEY,"1");
+    close("loginModal");
+    initBrandControls();
+    renderAdmin();
+    open("adminModal");
+  }else{
+    $("loginError").textContent="Clave incorrecta.";
+    $("adminPassInput").select();
+  }
+};
+
+$("logoutBtn").onclick=()=>{
+  sessionStorage.removeItem(AUTH_KEY);
+  resetForm();
+  close("adminModal");
+};
+
+function standardizeProductImage(file, size = 600, paddingRatio = 0.88, quality = 0.84) {
+  return new Promise((resolve, reject) => {
+    if (!file || !file.type.startsWith("image/")) return reject("Archivo no válido");
+    const reader = new FileReader();
+    reader.onload = e => {
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement("canvas");
+        canvas.width = size;
+        canvas.height = size;
+        const ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "#f6f4ef";
+        ctx.fillRect(0, 0, size, size);
+
+        const maxBox = size * paddingRatio;
+        const scale = Math.min(maxBox / img.width, maxBox / img.height);
+        const drawW = Math.max(1, Math.round(img.width * scale));
+        const drawH = Math.max(1, Math.round(img.height * scale));
+        const offsetX = Math.round((size - drawW) / 2);
+        const offsetY = Math.round((size - drawH) / 2);
+
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = "high";
+        ctx.drawImage(img, offsetX, offsetY, drawW, drawH);
+
+        resolve(canvas.toDataURL("image/webp", quality));
+      };
+      img.onerror = () => reject("Error al procesar imagen");
+      img.src = e.target.result;
+    };
+    reader.onerror = () => reject("Error al leer archivo");
+    reader.readAsDataURL(file);
+  });
+}
+
+function updatePreviewUI(imgSrc, statusText = "") {
+  currentImage = imgSrc;
+  if (imgSrc) {
+    $("imagePreview").src = imgSrc;
+    $("previewBox").style.display = "inline-block";
+    $("dropPlaceholder").style.display = "none";
+    $("removeImgBtn").style.display = "inline-block";
+  } else {
+    $("imagePreview").src = "";
+    $("previewBox").style.display = "none";
+    $("dropPlaceholder").style.display = "block";
+    $("removeImgBtn").style.display = "none";
+  }
+  $("imageStatus").textContent = statusText;
+}
+
+async function handleSelectedFile(file) {
+  if (!file || !isAdmin()) return;
+  $("imageStatus").textContent = "Ajustando foto al espacio del producto...";
+  try {
+    const standardImg = await standardizeProductImage(file);
+    updatePreviewUI(standardImg, "✓ Lista y centrada en el producto.");
+  } catch (err) {
+    alert("Selecciona una imagen válida (JPG, PNG, WebP).");
+    $("imageStatus").textContent = "";
+  }
+}
+
+function initBrandControls(){
+ const currentVal = $("brandSelect").value;
+ $("brandSelect").innerHTML = brands.map(b => {
+   const count = brandCount(b);
+   return `<option value="${esc(b)}">${esc(b)} (${count}/${MAX_PER_BRAND})</option>`;
+ }).join("");
+ if(currentVal && brands.includes(currentVal)) $("brandSelect").value = currentVal;
+ updateBrandQuotaHint();
+
+ $("brands").innerHTML =
+   `<button class="brand-chip ${activeBrand==="Todas"?"active":""}" data-brand="Todas">Todas las marcas</button>` +
+   brands.map(b => `<button class="brand-chip ${activeBrand===b?"active":""}" data-brand="${esc(b)}">${esc(b)}</button>`).join("");
+}
+
+$("brandSelect").onchange = updateBrandQuotaHint;
+
+function render(){
+ const query=$("search").value.toLowerCase().trim();
+ let list=products.filter(p=>(activeBrand==="Todas"||p.brand===activeBrand)&&(`${p.name} ${p.brand} ${p.category} ${p.description}`).toLowerCase().includes(query));
+ const order=$("sort").value;
+ if(order==="low")list.sort((a,b)=>a.price-b.price);
+ if(order==="high")list.sort((a,b)=>b.price-a.price);
+ if(order==="az")list.sort((a,b)=>a.name.localeCompare(b.name));
+ $("resultCount").textContent=`${list.length} producto${list.length===1?"":"s"}`;
+ $("products").innerHTML=list.length?list.map(p=>`
+  <article class="card">
+    <div class="product-photo" onclick="openProductDetail(${p.id})" title="Ver en grande">
+      ${p.image?`<img src="${p.image}" alt="${esc(p.name)}">`:`<span class="emoji" aria-hidden="true">${esc(p.emoji||"🎧")}</span>`}
+      <span class="brand-label">${esc(p.brand)}</span>
+      ${p.available===false?`<span class="status-badge">Agotado</span>`:""}
+    </div>
+    <div class="card-body">
+      <span class="type">${esc(p.category||"Audífonos para celular")}</span>
+      <button type="button" class="card-title-btn" onclick="openProductDetail(${p.id})"><h3>${esc(p.name)}</h3></button>
+      <p class="desc">${esc(p.description||"Consulta disponibilidad.")}</p>
+      <div class="card-bottom">
+        <span class="price">${money(p.price)}</span>
+        <div class="card-actions">
+          <button type="button" class="zoom-btn" onclick="openProductDetail(${p.id})">Ampliar</button>
+          <button type="button" class="add" aria-label="Agregar ${esc(p.name)} al carrito" ${p.available===false?"disabled title='Producto agotado'":""} onclick="addCart(${p.id})">+</button>
+        </div>
+      </div>
+    </div>
+  </article>`).join(""):`<div class="empty">No encontramos audífonos con esa búsqueda.</div>`;
+ renderCount();
+}
+
+function renderCount(){$("cartCount").textContent=cart.reduce((s,x)=>s+x.qty,0);}
+function addCart(id){
+  const p=products.find(x=>x.id===id);
+  if(!p || p.available===false)return;
+  let row=cart.find(x=>x.id===id);
+  row?row.qty++:cart.push({id,qty:1});
+  save();renderCount();
+}
+function renderCart(){
+ cart=cart.filter(x=>products.some(p=>p.id===x.id && p.available!==false));
+ $("cartItems").innerHTML="";
+ if(!cart.length)$("cartItems").innerHTML='<div class="empty">Todavía no agregas productos disponibles a tu carrito.</div>';
+ cart.forEach(x=>{
+   let p=products.find(p=>p.id===x.id);
+   let row=document.createElement("div");row.className="cart-line";
+   row.innerHTML=`<div><b>${esc(p.name)}</b><small>${esc(p.brand)} · ${money(p.price)} c/u</small></div><div class="qty"><button aria-label="Quitar uno" onclick="changeQty(${p.id},-1)">−</button><b>${x.qty}</b><button aria-label="Agregar uno" onclick="changeQty(${p.id},1)">+</button></div>`;
+   $("cartItems").append(row);
+ });
+ const total=cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0);
+ $("cartTotal").textContent=money(total);renderCount();save();
+}
+function changeQty(id,d){let x=cart.find(x=>x.id===id);if(!x)return;x.qty+=d;if(x.qty<1)cart=cart.filter(y=>y.id!==id);renderCart();}
+
+$("cartBtn").onclick=()=>{renderCart();open("cartModal")};
+document.querySelectorAll("[data-close]").forEach(b=>b.onclick=()=>close(b.dataset.close));
+document.querySelectorAll(".overlay").forEach(el=>el.addEventListener("click",e=>{if(e.target===el)close(el.id)}));
+$("search").oninput=render;$("sort").onchange=render;
+$("brands").onclick=e=>{let b=e.target.closest("[data-brand]");if(!b)return;activeBrand=b.dataset.brand;initBrandControls();render();};
+
+$("sendWhatsApp").onclick=()=>{
+ if(!cart.length){alert("Tu carrito está vacío.");return;}
+ const customer=$("customer").value.trim();if(!customer){alert("Escribe tu nombre para continuar.");$("customer").focus();return;}
+ const lines=cart.map(x=>{const p=products.find(p=>p.id===x.id);return `• ${p.brand} ${p.name} x${x.qty} — ${money(p.price*x.qty)}`}).join("\n");
+ const total=cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0);
+ const message=`¡Hola, Pelus Case! Quiero pedir estos audífonos:\nNombre: ${customer}\n\n${lines}\n\nTotal: ${money(total)}\n¿Me confirman disponibilidad?`;
+ window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,"_blank","noopener");
+};
+
+$("productImage").onchange = e => handleSelectedFile(e.target.files[0]);
+$("removeImgBtn").onclick = () => {
+  if(!isAdmin())return;
+  $("productImage").value = "";
+  updatePreviewUI(null, "Imagen quitada. Se usará el ícono indicado.");
+};
+
+const dz = $("dropZone");
+["dragenter","dragover"].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.add("dragover"); }));
+["dragleave","drop"].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.remove("dragover"); }));
+dz.addEventListener("drop", e => {
+  const file = e.dataTransfer.files[0];
+  if (file) handleSelectedFile(file);
+});
+
+document.addEventListener("paste", e => {
+  if (!isAdmin() || !$("adminModal").classList.contains("open")) return;
+  const items = e.clipboardData?.items;
+  if (!items) return;
+  for (const item of items) {
+    if (item.type.startsWith("image/")) {
+      handleSelectedFile(item.getAsFile());
+      break;
+    }
+  }
+});
+
+$("productForm").onsubmit=e=>{
+ e.preventDefault();
+ if(!isAdmin())return;
+ const id=$("productId").value?Number($("productId").value):Date.now();
+ const old=products.find(p=>p.id===id);
+ const brand=$("brandSelect").value;
+ const otherBrandItems=products.filter(p=>p.brand===brand && p.id!==id);
+ if(otherBrandItems.length >= MAX_PER_BRAND){
+   alert(`La marca ${brand} ya tiene el máximo de ${MAX_PER_BRAND} productos. Elimina o edita uno para agregar otro.`);
+   return;
+ }
+ const available=$("productAvailable").checked;
+ const item={
+   id,
+   name:$("productName").value.trim(),
+   brand,
+   category:$("productCategory").value.trim()||"Audífonos para celular",
+   price:Number($("productPrice").value),
+   description:$("productDesc").value.trim(),
+   emoji:$("productEmoji").value.trim()||"🎧",
+   image:currentImage,
+   available
+ };
+ if(old)products=products.map(p=>p.id===id?item:p);else products.unshift(item);
+ if(!available)cart=cart.filter(x=>x.id!==id);
+ save();resetForm();initBrandControls();render();renderAdmin();renderCart();
+};
+
+function resetForm(presetBrand = null){
+ $("productForm").reset();
+ $("productId").value="";
+ if(presetBrand && brands.includes(presetBrand)) $("brandSelect").value = presetBrand;
+ $("productCategory").value="Audífonos para celular";
+ $("productEmoji").value="🎧";
+ $("productAvailable").checked=true;
+ updatePreviewUI(null, "");
+ $("formTitle").textContent="＋ Agregar audífonos";
+ $("saveBtn").textContent="Guardar producto";
+ updateBrandQuotaHint();
+}
+$("clearBtn").onclick=()=>resetForm();
+
+function startAddForBrand(brand){
+ if(!isAdmin())return;
+ if(brandCount(brand) >= MAX_PER_BRAND){
+   alert(`${brand} ya alcanzó el límite de ${MAX_PER_BRAND} productos.`);
+   return;
+ }
+ resetForm(brand);
+ $("productName").focus();
+}
+
+function triggerQuickPhoto(id) {
+  if(!isAdmin())return;
+  quickTargetId = id;
+  $("quickImageInput").value = "";
+  $("quickImageInput").click();
+}
+
+$("quickImageInput").onchange = async e => {
+  const file = e.target.files[0];
+  if (!file || !quickTargetId || !isAdmin()) return;
+  try {
+    const standardImg = await standardizeProductImage(file);
+    products = products.map(p => p.id === quickTargetId ? { ...p, image: standardImg } : p);
+    save();render();renderAdmin();
+    if (Number($("productId").value) === quickTargetId) {
+      updatePreviewUI(standardImg, "✓ Fotografía actualizada.");
+    }
+  } catch (err) {
+    alert("No se pudo procesar la imagen.");
+  }
+  quickTargetId = null;
+};
+
+function renderAdmin(){
+ if(!isAdmin())return;
+ $("adminList").innerHTML = brands.map(b => {
+   const items = products.filter(p => p.brand === b);
+   const isFull = items.length >= MAX_PER_BRAND;
+   const emptySlotsCount = Math.max(0, MAX_PER_BRAND - items.length);
+
+   const rowsHtml = items.map(p => `
+     <div class="admin-product ${p.available===false?"paused":""}">
+       <div class="thumb">${p.image?`<img src="${p.image}" alt="">`:esc(p.emoji||"🎧")}</div>
+       <div>
+         <strong>${esc(p.name)}</strong>
+         <small>${money(p.price)} · ${p.available===false?"Agotado":"Disponible"}</small>
+       </div>
+       <div style="display:flex;gap:4px">
+         <button class="quick-cam" title="Subir o cambiar foto" aria-label="Cambiar foto de ${esc(p.name)}" onclick="triggerQuickPhoto(${p.id})">📷</button>
+         <button class="edit" title="Editar todos los campos" aria-label="Editar ${esc(p.name)}" onclick="editProduct(${p.id})">✎</button>
+         <button class="delete" title="Eliminar producto" aria-label="Eliminar ${esc(p.name)}" onclick="deleteProduct(${p.id})">×</button>
+       </div>
+     </div>`).join("");
+
+   const emptySlotsHtml = Array.from({ length: emptySlotsCount }, (_, idx) => `
+     <div class="empty-slot">
+       <span>Espacio ${items.length + idx + 1} de ${MAX_PER_BRAND} disponible</span>
+       <button type="button" class="slot-add-btn" onclick="startAddForBrand('${esc(b)}')">＋ Subir aquí</button>
+     </div>`).join("");
+
+   return `
+     <div class="brand-group">
+       <div class="brand-group-head">
+         <span class="brand-group-title">${esc(b)}</span>
+         <span class="brand-slot-count ${isFull ? "full" : ""}">${items.length} / ${MAX_PER_BRAND}</span>
+       </div>
+       <div class="brand-slot-list">${rowsHtml}${emptySlotsHtml}</div>
+     </div>`;
+ }).join("");
+}
+
+function editProduct(id){
+ if(!isAdmin())return;
+ const p=products.find(x=>x.id===id);if(!p)return;
+ $("productId").value=p.id;
+ $("productName").value=p.name;
+ $("brandSelect").value=p.brand;
+ $("productCategory").value=p.category||"Audífonos para celular";
+ $("productPrice").value=p.price;
+ $("productEmoji").value=p.emoji||"🎧";
+ $("productDesc").value=p.description||"";
+ $("productAvailable").checked=p.available!==false;
+ $("productImage").value="";
+ updatePreviewUI(p.image || null, p.image ? "Imagen actual cargada." : "Sin fotografía.");
+ $("formTitle").textContent="✎ Editar producto completo";
+ $("saveBtn").textContent="Guardar cambios";
+ updateBrandQuotaHint();
+ $("productName").focus();
+}
+
+function deleteProduct(id){
+ if(!isAdmin())return;
+ const p=products.find(x=>x.id===id);
+ if(!p || !confirm(`¿Eliminar ${p.name}?`))return;
+ products=products.filter(x=>x.id!==id);
+ cart=cart.filter(x=>x.id!==id);
+ save();initBrandControls();render();renderAdmin();renderCart();
+}
+
+$("year").textContent=new Date().getFullYear();
+resetForm();
+initBrandControls();
+render();
+</script>
+</body>
+</html>
